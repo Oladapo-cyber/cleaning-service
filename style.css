@@ -1,0 +1,377 @@
+/* I want to set the cursor to pointer whenever any button or link is hovered over. And I want to do it by creating a btn class and adding a style to that class then adding the class to all the buttons in the html*/
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    font-family: cursive, 'Courier New', Courier, monospace;
+    background-color: #FFFDD0;
+}
+
+
+.navigation{
+    background-color: lightblue;
+    height: 80px;
+    width: 100%;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.logo{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 80px;
+    margin: 15px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    padding-left: 20px;
+    font-size: large;
+}
+
+.nav-list li a:hover{
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+}
+
+
+.btn{
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    border: none;
+
+
+    /* border: 20px; */
+    /* margin-top: 5px; */
+    /* box-sizing: content-box; */
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: black;
+    color: blueviolet;
+}
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    background-image: url(pexels-aleksandar-pasaric-625279.jpg);
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* The hero section was not covering the full screen when I load it, so I set the height to be 100 percent of the viewport height */
+    height: 90vh;
+    position: relative;
+    isolation: isolate;
+}
+
+
+.hero-section::after{
+    content: "";
+    position: absolute;
+    /* Inset in css is the shortcut for top bottom left right and they said it's new but there's huge browsers support for it. */
+    inset: 0;
+    background: black;
+    z-index: -1;
+    opacity: .6;
+}
+
+.hero-text-container{
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
+}
+
+.hero-image-container{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    padding: 20px;
+    border: 20px;
+    /* I put margin on the image container and it broughht the image away from covering the background image*/
+    /* margin: 50px; */
+}
+
+.hero-image-container img{
+    max-width: 100%;
+    border-radius: 9px;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, .5);
+    /* When I set the height of the image to auto, it made the image longer and it affected the hero section by making it not render well on full screen mode. But when I gave it a value, the image became smaller and the hero section became normal again.*/
+   /* I omitted the height within the css cos I had added an inline height and width attribute in the html file and it's conflicting with this one. */
+    /* height: 350px; */
+}
+
+.cta-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    margin: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    color: cyan;
+    font-weight: bolder;
+}
+
+.cta-btn:hover{
+    background-color: black;
+}
+
+.main-section{
+    color: black;
+}
+
+.heading-rule{
+    margin: 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    background-color: darkgray;
+}
+
+.image-container{
+    flex: 1;
+    margin-right: 10px;
+    float: right;
+    width: 50%;
+}
+/* 
+.image-container{
+    width: 200px;
+    height: auto;
+    
+} */
+
+.text-container{
+    flex: 1;
+    padding: 12px;
+    float: left;
+    width: 50%;
+}
+
+.read-more{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    margin: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    color: cyan;
+    font-weight: bolder;
+    align-self: last baseline;
+}
+
+.read-more:hover{
+    background-color: black;
+}
+
+
+.team{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap is a better way of giving space between a flex items or grid items and it's much better than spacing them using margins */
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 25px;
+
+} 
+
+.profile-box{
+    width: 200px;
+    height: 200px;
+    background-color: #8FBC8F/* #D2B48C *//* rgb(201, 144, 154) */;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 10px 10px rgba(201, 144, 154, 0.2);
+    padding: 20px;
+    position: relative;
+}
+
+.profile-box img{
+    /* Initially, I set the position of the image to absolute and it was overlaying on top of the text in the div so I removed the absolute positioning as it's not right for this kind of image */
+    width: 100px;
+    float: right;
+    /* Here,I mistakenly set the border radius
+    to 0% then added 10px beside it and it brought
+    an effect where the top left and bottom right
+    edge of the image didn't have the effect*/
+    border-radius: 10px;
+}
+
+.services-form input, .services-form textarea, .services-form select{
+    width: 500px;
+}
+
+.services-form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    width: 98.5vw;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: burlywood;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.services-option{
+    display: flex;
+    column-gap: 20px;
+    padding: 25px;
+    background-color: bisque;
+    flex-direction: row;
+}
+
+.services-img{
+    width: 180px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.form-container{
+    max-width: 500px;
+    margin: 0;
+}
+
+input,select{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+footer{
+    /* I initially put the position fixed to the footer section, then I found out that it's used to always make the footer section visible. And to make it always flow with the scroll I need to remove the position fixed. */
+    /* position: fixed; */
+    bottom: px;
+    width: 100%;
+    background:grey;
+}
+
+.main-content{
+    display: flex;
+}
+
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2{
+    font-size: medium;
+    font-family: cursive;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+}
+
+
+/* The testimonial styles */
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    flex-direction: column;
+    }
+    
+    .testimonial {
+        color: white;
+        background-color:black;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        padding: 15px;
+    }
+    
+    .testimonial-content {
+    text-align: center;
+    }
+    
+    .testimonial-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+    
+    .testimonial-author {
+    font-size: 14px;
+    font-style: italic;
+    }
+    
+    .feedback-form {
+    max-width: 300px;
+    margin: 20px auto;
+    border-top: 200px;
+    }
+    
+    .feedback-form h2 {
+    text-align: center;
+    }
+    
+    .feedback-form textarea,
+    .feedback-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    
+    .feedback-form button {
+    display: block;
+    margin: 0 auto;
+    }
+
+    .testimonial-section{
+        padding: 20px;
+        border: 300px;
+    }

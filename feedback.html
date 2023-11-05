@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback Page</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <label class="logo">Group L</label>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        </header>
+        <section class="hero-section" style=" margin-bottom: 300px; height:50vh; background-image: url(pexels-craig-adderley-1546912.jpg); background-size: contain;">
+                <div class="hero-text-container">
+                <h1 style="font-size: xx-large; text-align: center;">
+                    Feedback
+                </h1>
+                </div>
+        </section>
+        <main style="color: black;">
+            <section class="testimonial-section">
+                <div class="testimonial-container">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"I had an amazing experience with your service! Highly recommended!"</p>
+                            <p class="testimonial-author">Adeniyi</p>
+                        </div>
+                    </div>
+
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"I am extremely satisfied with the quality of service provided. The team was professional, efficient, and delivered exceptional results."</p>
+                    <p class="testimonial-author">- Chika</p>
+                </div>
+            </div>
+
+
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"I would highly recommend this service to anyone looking for reliable and top-notch customer support. They were prompt, helpful, and resolved all my queries"</p>
+                    <p class="testimonial-author">- Adamu</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"The team demonstrated excellent communication skills throughout the project. They were responsive, attentive, and ensured that all my requirements were met! Good one from these guys!"</p>
+                    <p class="testimonial-author">- Joseph</p>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"I hired them for a deep clean and they did an amazing job! My house has never looked this clean and fresh. Highly recommended!"</p>
+                    <p class="testimonial-author">- Grace</p>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"I've been using this cleaning service for a few months now and I'm consistently impressed. The cleaners are friendly, punctual, and always do a fantastic job. It's such a relief to come home to a clean house!"</p>
+                    <p class="testimonial-author">- Isaac</p>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"I had a last-minute request for a cleaning service and they were able to accommodate me. The team arrived on time and did a fantastic job, even in the limited time they had. I'm grateful for their flexibility and the quality of their work."</p>
+                    <p class="testimonial-author">- Lola</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="margin-top: 350px; width: 100%; background-color: burlywood;">
+        <form class="services-form" action="/submit-feedback" method="POST">
+            <h2>Want to share your experience or give us a feedback to improve our services? </h2>
+            <textarea name="feedback" placeholder="Share your experience or your feedback here"></textarea>
+            <input type="text" name="name" placeholder="Your name">
+            <input  type="email" name="email" placeholder="Your email">
+            <button tyle="display: block; margin: 0 auto;" class="cta-btn btn" type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About Us</h2>
+                <div class="content">
+                    <p>We are Nigeria's leading cleaning service company. We offer the best services on the market at very affordable prices.</p>
+                    <div class="social">
+                        <a href="#"><span class=""></span></a>
+                        <a href="#"><span class=""></span></a>
+                        <a href="#"><span class=""></span></a>
+                        <a href="#"><span class=""></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="mapmarker"></span>
+                        <span class="text">Laspotech</span>
+                    </div>
+                    <div class="phone">
+                        <span class="phone-num-logo"></span>
+                        <span class="text">+2348133437231</span>
+                    </div>
+                    <div class="email">
+                        <span class="email-logo"></span>
+                        <span class="text">groupl@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>Contact us</h2>
+                <div class="content">
+                    <form action="">
+                        <div class="email">
+                            <!-- In the label portion below, I used this code and it and unnecessary as label is the best to use in this case. <div class="text">Email *</div> -->
+                            <label for="Name">Name *</label>
+                            <input type="email"  name="name" placeholder="Email" required>
+                        </div>
+                        <div class="msg">
+                            <label for="message">Message *</label>
+                            <input type="text" name="message" placeholder="Type here">
+                        </div>
+                        <div>
+                            <!-- I want to use this in place of the button below so when a user inputs a message, they can send it to our email. -->
+                            <!-- <a class="btn" href="mailto:groupl@gmail.com" type="submit">Send</a> -->
+                            <button class="btn" type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+</body>
+</html>
