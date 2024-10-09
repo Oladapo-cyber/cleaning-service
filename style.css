@@ -5,27 +5,72 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box;
+    /* I want to look up what the below box sizing does to the page and if it's essential to add it to the reset of the whole page. */
+    /* box-sizing: border-box; */
 }
 
 body{
     color: white;
-    font-family: cursive, 'Courier New', Courier, monospace;
-    background-color: #FFFDD0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(221, 206, 206);
 }
 
 
-.navigation{
+.navbar{
+    /* In the navigation styling I just had the 3 stylings below:
     background-color: lightblue;
     height: 80px;
     width: 100%;
+    with just these styles, when I reduce the screen size the
+    list items in the navbar overflow to the next line and enters the text of the hero section.
+    But when I added display: flex; it got better and remained on the same line when I reduce the screen.
+    */ 
+    /* When I put the flex, it made the ul/li start from the right, but when I specified the 
+    flex direction: row-reversed;, it made the items align on the left. I don't know if 
+    this is the best way to achieve this. */
+    display: flex;
+    background-color: rgb(53 53 53);
+    justify-content: space-between;
+    align-items: center;
+    /* If I add the position fixed rule, the hero section covers the navigation bar or maybe it disappeared due to the way I styled the hero section. */
+    /* position: fixed; */
+    width: 100%;
 }
 
-.header{
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar ul li{
+    padding: 30px 0;
+}
+
+.navbar ul li a{
+    margin: 0 10px;
+    color: aliceblue;
+    text-decoration: none;
+/*     display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    padding-left: 20px;
+    font-size: large; */
+}
+
+.navbar ul li a:hover{
+    padding: 10px; 
+    cursor: pointer;
+    text-decoration: underline 5px black;
+    color: aqua;
+    /* 
+    background-color: black; */
+}
+
+/* .header{
     position: sticky;
     top: 0;
     z-index: 100;
-}
+} */
 
 .img{
     display: block;
@@ -33,32 +78,14 @@ body{
     height: auto;
 }
 
-.logo{
+/* I don't think this logo css is useful anymore as I created and downloaded the logo online. */
+/* .logo{
     color: black;
     font-size: 30px;
     font-weight: bold;
     line-height: 80px;
     margin: 15px;
-}
-
-nav ul{
-    float: right;
-    margin-right: 50px;
-}
-
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-    padding-left: 20px;
-    font-size: large;
-}
-
-.nav-list li a:hover{
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: black;
-}
+} */
 
 
 .btn{
@@ -101,7 +128,7 @@ nav ul li{
     inset: 0;
     background: black;
     z-index: -1;
-    opacity: .6;
+    opacity: .5;
 }
 
 .hero-text-container{
@@ -154,7 +181,7 @@ nav ul li{
     margin: 0px;
 }
 
-.container{
+.main-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -164,7 +191,14 @@ nav ul li{
     display: flex;
     align-items: center;
     padding: 18px;
-    background-color: darkgray;
+    background-color:#d8e6ec /* rgb(211, 211, 238) */;
+}
+
+.active{
+    color: green;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: blue;
 }
 
 .image-container{
@@ -209,10 +243,10 @@ nav ul li{
 .team{
     width: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     /* gap is a better way of giving space between a flex items or grid items and it's much better than spacing them using margins */
-    gap: 1rem;
+    gap: 3rem;
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 25px;
@@ -222,7 +256,7 @@ nav ul li{
 .profile-box{
     width: 200px;
     height: 200px;
-    background-color: #8FBC8F/* #D2B48C *//* rgb(201, 144, 154) */;
+    background-color: #e2ede2/* #D2B48C *//* rgb(201, 144, 154) */;
     border-radius: 10px;
     margin-bottom: 30px;
     box-shadow: 0 10px 10px 10px rgba(201, 144, 154, 0.2);
@@ -241,6 +275,15 @@ nav ul li{
     border-radius: 10px;
 }
 
+.pricing{
+    padding: 5px;
+    margin: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #333;
+    text-align: center;
+}
+
 .services-form input, .services-form textarea, .services-form select{
     width: 500px;
 }
@@ -252,25 +295,42 @@ nav ul li{
     gap: 10px;
     width: 98.5vw;
     justify-content: center;
-    align-items: center;
-    border: 1px solid skyblue;
+    align-items: center; 
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: burlywood;
-    justify-content: center;
+    background-color: rgb(215, 215, 217);
     margin: 0 auto;
 }
 
+.services-container{
+    /* I want to style the container which holds all the services we render
+       I did't give it any class initially and I added an inline style to it before
+       but now I want to style it as a container that it is and make it more uniform.
+     */
+}
+
 .services-option{
-    display: flex;
-    column-gap: 20px;
-    padding: 25px;
-    background-color: bisque;
-    flex-direction: row;
+    display: flex; 
+    /* Justify content is used for aligning items on the main axis(Horizontal). The default is flex-start*/
+    /* justify-content: start; */
+    /* Align items is used for aligning items on the cross axis(vertical) */
+    /* align-items: flex-start; */
+    /* The align-content only works when we have flex-wrap set to wrap and have items wrapping. The align-content property allows us to align everything on the cross axis*/
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 1em;
+    
+    /* 
+    justify-content: space-between;
+    column-gap: 10px;
+    padding: 5px;
+    background-color: bisque; */
+    /* I can remove this cos flex direction is set to row (->) by default. */
+    /* flex-direction: row; */
 }
 
 .services-img{
-    width: 180px;
+    float: left;
     height: 300px;
     object-fit: cover;
 }
@@ -325,53 +385,141 @@ footer{
     flex-direction: column;
     }
     
-    .testimonial {
-        color: white;
-        background-color:black;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin: 20px;
-        padding: 15px;
-    }
-    
-    .testimonial-content {
-    text-align: center;
-    }
-    
-    .testimonial-text {
-    font-size: 18px;
-    margin-bottom: 10px;
-    }
-    
-    .testimonial-author {
-    font-size: 14px;
-    font-style: italic;
-    }
-    
-    .feedback-form {
-    max-width: 300px;
-    margin: 20px auto;
-    border-top: 200px;
-    }
-    
-    .feedback-form h2 {
-    text-align: center;
-    }
-    
-    .feedback-form textarea,
-    .feedback-form input {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    }
-    
-    .feedback-form button {
-    display: block;
-    margin: 0 auto;
-    }
+.testimonial {
+    color: white;
+    background-color:black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 15px;
+}
 
-    .testimonial-section{
+.testimonial-content {
+text-align: center;
+}
+
+.testimonial-text {
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.testimonial-author {
+font-size: 14px;
+font-style: italic;
+}
+
+.feedback-form {
+max-width: 300px;
+margin: 20px auto;
+border-top: 200px;
+}
+
+.feedback-form h2 {
+text-align: center;
+}
+
+.feedback-form textarea,
+.feedback-form input {
+display: block;
+width: 100%;
+margin-bottom: 10px;
+}
+
+.feedback-form button {
+display: block;
+margin: 0 auto;
+}
+
+.testimonial-section{
+    padding: 20px;
+    border: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+.container{
+    background: linear-gradient(45deg, WHITE,gray);
+    padding: 5% 6%; 
+   /*  padding-bottom: 100%; */
+} 
+
+.container .heading{
+    text-align: center;
+    color: white;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    font-size: 45px;
+    padding-bottom: 20px;
+}
+
+
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 15px;
+}
+
+
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 7px;
+    background-color: rgb(180, 219, 253);
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+.container .box-container .box img{
+    height: 80px;
+
+}
+
+.container .box-container .box h3{
+    color: #444;
+    font-size: 22px;
+    padding: 10px 0;
+}
+ 
+.container .box-container .box p{
+    color: #777;
+    font-size: 20px;
+}
+ 
+.container .box-container .box .n-btn{
+    margin-top: 10px;
+    /*I want to look this up, I think the inline-block set to the display of the button makes it not overflow out of the box, instead the box expands to contain the content of the button. */
+    display: inline-block;
+    background-color: #333;
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: khaki;
+    font-size: larger;
+}
+
+.container .box-container .box .n-btn:hover{
+    background-color: #39284df4;
+    letter-spacing: 1px;
+}
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+    transform: scale(1.03);
+}
+
+/* @media (max-width: 760px){
+    .container{
         padding: 20px;
-        border: 300px;
     }
+} */
+
+

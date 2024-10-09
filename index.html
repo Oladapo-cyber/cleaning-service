@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group L</title>
+    <title>Daps Cleaning Service</title>
     <!-- I'm leaving the link below for a favicon -->
-    <link rel="icon" href="" type="image/x-icon">
+    <link rel="icon" href="cleaning_website_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <!-- I want to look up what the link favicon is used for -->
 </head>
 <body>
-    <header class="header">
-    <nav class="navigation">
-        <label class="logo">Group L</label>
+     
+    <nav class="navbar">
+        <!-- <div class="nav-wrapper"> -->    
+        <a href="index.html"><img src="cleaning_website_logo.svg" alt="logo"></a>
         <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
+            <li><a class=" " href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact us</a></li>
             <li><a href="feedback.html">Feedback</a></li>
         </ul>
     </nav>
-    </header>
+    
     <section class="hero-section">
         <!-- I noticed that when I put the hero section into a section tag, it became smaller and better when rendered. -->
             <div class="hero-text-container">
@@ -38,7 +39,7 @@
     </section>
 
     <main class="main-section">
-        <div class="container">
+        <div class="main-container">
             <div class="row" style="background-color: silver;">
                 <div class="image-container">
                     <img  class="img" src="pexels-mark-2724749.jpg" alt="Image">
@@ -53,22 +54,22 @@
         </div>
         <br>
         
-        <div class="row" style="background-color:#87CEEB /* #98FF98 */;">
+        <div class="row">
             <div class="text-container" style="padding-top: 62px;">
                 <h3 class="sub-heading">Special offer</h3>
                 <hr class="heading-rule">
-                <p>Book your first appointment with us and enjoy a 20% discount. Use the code <strong>20% GROUP L</strong> when booking the appointment to claim this offer. A new, better and unforgetable experience awaits you as our cleaning products are eco friendly combined with the professional hands that keep you happy when you remember your time with us! You can't stop at one!</p>
+                <p>Book your first appointment with us and enjoy a 20% discount. Use the code <strong>20% DAPS</strong> when booking the appointment to claim this offer. A new, better and unforgetable experience awaits you as our cleaning products are eco friendly combined with the professional hands that keep you happy when you remember your time with us! You can't stop at one!</p>
                 <a href="/services.html#CTA" class="cta-btn">Book Now</a>
             </div><br>
             <div class="text-container">
                 <h3 class="sub-heading">Our Vision</h3>
                 <hr class="heading-rule">
-                <p>At Group L cleaning sercive, we envision a future where there won't be a worry about dirt in Nigerian homes, offices and enviroment at large... Cos a clean city is a happy one. We are commited to making a positive inpact in the cleaning sector by employing visionary people who share the same goal with us. With our passion, expertise and unwavering dedication, we are confident in achieving our vision and become a leader in the industry.</p>
+                <p>At Daps cleaning service, we envision a future where there won't be a worry about dirt in Nigerian homes, offices and enviroment at large... Cos a clean city is a happy and healthy one. We are commited to making a positive impact in the cleaning sector by employing visionary people who share the same goal with us. With our passion, expertise and unwavering dedication, we are confident in achieving our vision and becoming a leader in the industry.</p>
             </div>
         </div><br>
-
-        <div class="container">
-            <div class="row" style="background-color: wheat;">
+        <!-- I removed the container class in the div below -->
+        <div class="">
+            <div class="row">
                 <div class="image-container">
                     <img style="width: 700px; height: 450px; object-fit: cover;" class="img" src="pexels-rdne-stock-project-5591493.jpg" alt="Image">
                 </div>
@@ -89,50 +90,73 @@
                 <img class="img" src="pexels-liliana-drew-9462302.jpg" alt="">
             </div>
         </div> -->
-        
-        <div style="border: 1px solid red; background-color: bisque;">
-            <h1 style="text-align: center;">Our Services</h1>
-            <hr>
-            <div class="services-option">
-                <div class="services">
-                    <img class="services-img" src="pexels-rdne-stock-project-5591969.jpg" alt="Regular-Cleaning">
+
+        <div class="container">
+            <h1 class="heading">Our Services</h1>
+    
+            <div class="box-container">
+                
+                <div class="box">
+                    <img style="height: 186px; width: 280px;" src="pexels-rdne-stock-project-5591969.jpg" alt="Regular Cleaning">
+                
                     <h3>Regular House Cleaning</h3>
-                    <p>Our regular housecleaning is designed for your house to look spotless and inviting. With this package, we clean all surfaces, vaccum and mop the floor, clean the bathrooms and tidy and mop other parts of the house.</p><br>
-                    <i style="padding: 5px; border-radius: 5px; color: white; background-color: brown;">#15,000</i>
+                    
+                    <p>Our regular housecleaning is designed for your house to look spotless and inviting. With this package, we clean all surfaces, vaccum and mop the floor, clean the bathrooms and tidy and mop other parts of the house.</p>
+                    <a href="#" class="n-btn">Request Service</a>
                 </div>
+    
+                <div class="box">
+                    <img style="height: 186px; width: 280px;" src="pexels-matilda-wormwood-4099083.jpg" alt="Regular Cleaning">
                 
-                <div class="services">
-                    <img class="services-img" src="pexels-liliana-drew-9462224.jpg" alt="Regular-Cleaning">
                     <h3>Kitchen Cleaning</h3>
-                    <p>Let us take care of your kitchen! Our professionals will deep clean your appliances, sanitize countertops, and scrub away grease and grime, leaving your kitchen fresh and hygienic.</p><br>
-                    <i style="padding: 5px; border-radius: 5px; color: white; background-color: brown;">#40,000</i>
+                    
+                    <p>Let us take care of your kitchen! Our professionals will deep clean your appliances, sanitize countertops, and scrub away grease and grime, leaving your kitchen fresh and hygienic.</p>
+                    <a href="#" class="n-btn">Request Service</a>
                 </div>
-                <div class="services">
-                    <img class="services-img" src="pexels-tima-miroshnichenko-6195292.jpg" alt="Regular-Cleaning">
+                
+                <div class="box">
+                    <img style="height: 186px; width: 280px;" src="pexels-ketut-subiyanto-4246218.jpg" alt="Movein/Moveout Cleaning">
+                
                     <h3>Move-In/MoveOut Cleaning</h3>
-                    <p>Moving can be stressful, but our move in/move out cleaning service makes it easier. We'll thoroughly clean every nook and cranny, ensuring a fresh start for you or the next occupants.</p><br>
-                    <i style="padding: 5px; border-radius: 5px; color: white; background-color: brown;">#60,000</i>
+                        
+                    <p>Moving can be stressful, but our move in/move out cleaning service makes it easier. We'll thoroughly clean every nook and cranny, ensuring a fresh start for you or the next occupants.</p>
+                    <a href="#" class="n-btn">Request Service</a>
                 </div>
                 
-                <div class="services">
-                    <img class="services-img" src="pexels-ron-lach-8072075.jpg" alt="Regular-Cleaning">
-                    <h3>Office/commercial cleaning Cleaning</h3>
-                    <p>>Maintain a clean and professional workspace with our office/commercial cleaning service. We'll tidy up workstations, sanitize common areas, and ensure a clean environment for your employees and clients.</p><br>
-                    <i style="padding: 5px; border-radius: 5px; color: white; background-color: brown;">#50,000</i>
+                <!-- <div class="box">
+                    <img style="height: 186px; width: 280px;" src="pexels-nathan-cowley-713297.jpg" alt="Office-Cleaning">
+                
+                    <h3>Office/Commercial Cleaning</h3>
+                        
+                    <p>Maintain a clean and professional workspace with our office/commercial cleaning service. We'll tidy up workstations, sanitize common areas, and ensure a clean environment for your employees and clients.</p>
+                    <a href="#" class="n-btn">Request Service</a>
                 </div>
                 
-                <div class="services">
-                    <img class="services-img" src="pexels-vlad-fonsark-5100851.jpg" alt="Regular-Cleaning">
+                <div class="box">
+                    <img style="height: 186px; width: 280px;" src="pexels-vlad-fonsark-5100851.jpg" alt="Window-Cleaning">
+                
                     <h3>Window Cleaning</h3>
-                    <p>Get streak-free windows that let the sunshine in! Our window cleaning service will leave your windows crystal clear, enhancing the overall appearance of your space.</p><br>
-                    <i style="padding: 5px; border-radius: 5px; color: white; background-color: brown;">#90,000</i>
+                        
+                    <p>Get streak-free windows that let the sunshine in! Our window cleaning service will leave your windows crystal clear, enhancing the overall appearance of your space.</p>
+                    <a href="#" class="n-btn">Request Service</a>
+                </div> -->
+    
+                <div class="box">
+                    <img style=" height: 186px; width: 280px;" src="pexels-rodolfo-gaion-18421329.jpg" alt="Regular Cleaning">
+                
+                    <h3> Enviromental Cleaning</h3>
+                    
+                    <p>This is a sustainable service offered by our company that prioritizes eco-friendly practices to minimize environmental impact. This includes using green cleaning products, reducing waste, and promoting sustainability for a cleaner and healthier space.</p>
+                    <a href="#" class="n-btn">Request Service</a>
                 </div>
-    
             </div>
-    
+                
         </div>
         
+        
 
+        
+        <h1 style="text-align: center; padding: 5px;">Our Team</h1><hr>
         <div class="team">
             <div class="profile-box" style="color: black;">
                 <h5>Sanni Ibrahim Akorede</h5>
@@ -164,9 +188,9 @@
         <footer>
             <div class="main-content">
                 <div class="left box">
-                    <h2>About Us</h2>
+                    <h2>About</h2>
                     <div class="content">
-                        <p>We are Nigeria's leading cleaning service company. We offer the best services on the market at very affordable prices.</p>
+                        <p>Nigeria's leading cleaning service company. We offer the best services on the market at very affordable prices.</p>
                         <div class="social">
                             <a href="#"><span class=""></span></a>
                             <a href="#"><span class=""></span></a>
@@ -176,24 +200,24 @@
                     </div>
                 </div>
                 <div class="center box">
-                    <h2>Address</h2>
+                    <h2>Contacts</h2>
                     <div class="content">
                         <div class="place">
-                            <span class="mapmarker"></span>
-                            <span class="text">Laspotech</span>
+                            <span class="mapmarker">Address:</span>
+                            <span class="text">Lagos, Nigeria.</span>
                         </div>
                         <div class="phone">
-                            <span class="phone-num-logo"></span>
+                            <span class="phone-num-logo">Phone:</span>
                             <span class="text">+2348133437231</span>
                         </div>
                         <div class="email">
-                            <span class="email-logo"></span>
-                            <span class="text">groupl@gmail.com</span>
+                            <span class="email-logo">@:</span>
+                            <span class="text">ydapo50@gmail.com</span>
                         </div>
                     </div>
                 </div>
                 <div class="right box">
-                    <h2>Contact us</h2>
+                    <h2>Reach Us</h2>
                     <div class="content">
                         <form action="">
                             <div class="email">
